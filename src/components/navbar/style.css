@@ -1,0 +1,19 @@
+.header {
+    box-shadow: var(--shadow);
+}
+
+.header__wrapper {
+    padding: 20px 0;
+}
+
+.header__wrapper a:last-child {
+    margin-left: 20px;
+}
+
+.header__wrapper a {
+    transition: all .3s;
+}
+
+.header__wrapper a:hover {
+    color: var(--main-color);
+}

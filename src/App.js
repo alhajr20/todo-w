@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Navbar from './components/navbar';
+import Promo from "./components/promo";
+import Todos from "./components/todos";
 import './App.css';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Promo />}/>
+          <Route path="/todos" element={<Todos />}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
